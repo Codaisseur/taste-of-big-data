@@ -8,10 +8,27 @@
     'use strict';
 
     var movies = new Array();
+    var genres = new Array();
 
     // Callback for how a csv row should be parsed
     function parseMovieDatum(row) {
       var movieDatum = row.data[0];
+      try {
+        var movieGenres = JSON.parse(movieDatum.genres);
+      } catch {
+        var movieGenres = [];
+      }
+      for(var movieGenre of movieGenres){
+        var genre = genres.find((genre) => (genre.name === movieGenre.name));
+        if (genre === undefined) {
+          genre = {
+            name: movieGenre.name,
+            movies: new Array()
+          }
+          genres.push(genre);
+        }
+        genre.movies.push(interestingFields(movieDatum));
+      }
       movies.push(interestingFields(movieDatum));
     };
 
@@ -31,14 +48,33 @@
       header: true,
       worker: true,
       dynamicTyping: true,
-      preview: 10, //limit the amount of results | delete when done with setup
+      // preview: 100, //limit the amount of results | delete when done with setup
       step: parseMovieDatum,
       complete: displayMovies,
     });
 
     function displayMovies(){
-      movies = removeHardlyRatedMovies(movies);
-      renderMovies(bestMovies(movies, 4), "most-popular");
+      displayPopularMovies();
+      displayMoviesByGenre();
+    }
+
+    function displayMoviesByGenre(){
+      var parentList = document.getElementById('popular-by-genre')
+      for(var genre of genres){
+        var genreId = `genre-${genre.name}`;
+        var genreElement = document.createElement("div");
+        genreElement.id = genreId;
+        genreElement.innerHTML = genre.name;
+        parentList.appendChild(genreElement);
+        renderMovies(bestMovies(genre.movies, 10), genreId);
+      }
+    }
+
+    function displayPopularMovies(){
+      renderMovies(
+        bestMovies(movies,  4),
+        "most-popular"
+      );
     }
 
     function renderMovies(movies, parentElement){
@@ -48,18 +84,20 @@
         var movieHTML = document.createElement('div')
         movieHTML.className = 'movie';
         movieHTML.innerHTML = `
-          <span class="title">${movie.title}</span>
-          <span class="year">${movie.year} </span>
-          <span class="score">${movie.score}</span>
-          <span class="votes">${movie.votes}</span>`;
+          <span class="movie title">${movie.title}</span>
+          <span class="movie year">${movie.year} </span>
+          <span class="movie score">${movie.score}</span>
+          <span class="movie votes">${movie.votes}</span>`;
         parentList.appendChild(movieHTML);
       };
     }
 
     //order movies param on score, and return the top 5 of it
     function bestMovies(movies, amount=5){
+      removeHardlyRatedMovies(movies);
       return sortMoviesOnScore(movies).slice(0, amount);
     };
+
 
     function sortMoviesOnScore(movies){
       return movies.sort((a,b) => b.score - a.score);
@@ -104,12 +142,12 @@
 
   </script>
   <style>
-    .movie.header { background-color: lightgrey !important;}
+    .movie.header { background-color: lightgrey;}
     .movie { display: grid;  grid-template-columns: 4fr 1fr 1fr 1fr}
-    .movie .title { font-size: 150%; grid-column: 1;}
-    .movie .year  { font-variant-position: super; grid-column: 2}
-    .movie .score { background-color: lightgreen; grid-column: 3}
-    .movie .votes {grid-column: 4}
+    .movie.title { font-size: 150%; grid-column: 1;}
+    .movie.year  { grid-column: 2}
+    .movie.score { background-color: lightgreen; grid-column: 3}
+    .movie.votes {grid-column: 4}
   </style>
   </head>
 
@@ -128,7 +166,10 @@
       </div>
 
       <li>Most popular per year</li>
-      <li>Best movies per genre</li>
+      <div id="popular-by-genre">
+        <h3>Most popylar per genre</h3>
+      </div>
+
     </ul>
 
     <footer>Made with &hearts; at Taste of Code</footer>
