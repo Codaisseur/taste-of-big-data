@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eee;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+h1{
+  text-align: center;
+}
+.movie-table {
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+.movie-table h3 {
+  text-align: center;
+  grid-column: span 4
+}
+.movie-table {
+  display: grid;
+  grid-template-areas: "title year score votes";
+  grid-template-columns: 4fr 1fr 1fr 1fr;
+}
+
+.movie-table {
+  text-align: right;
+}
+
+.movie-table .title {
+  text-align: left;
+}
+
+.header-line {
+  /* text-align: center; */
+  font-weight: bold;
+  background-color: #fff;
+  font-size:  110%;
+}
+.movie-list {
+  border-right: 1px solid rgba(0,0,0,0.1);
+  border-left: 1px solid rgba(0,0,0,0.1);
+}
+
+footer{
+  position: fixed;
+  background-color: #f8f8f8;
+  bottom: 0.2em;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+  padding-top: 1em;
+  padding-bottom: 0.4em;
+  left: 30%;
+  right: 30%;
+  width: 40%;
+  text-align: center;
+}
