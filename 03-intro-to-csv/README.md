@@ -12,14 +12,18 @@ There are different variants of data. Sometimes you'll have to work with excel f
 CSV is an abbreviations of 'Character Separated Values' - or to use our new Javascript knowledge:
 We have a file full with strings and numbers, and you can tell them apart by a special character.
 
-We will be using a kinda large dataset from kaggle.com, but let me start with a much smaller CSV file to introduce the topic to you.
+CSV isn't tied to any programming language; it is just a file format to store data.
+
+Everyone knows spreadsheets, right? CSV is what spreadsheet programs use under the hood (or at least it is real close to CSV).
 
 ### Movies, movies, movies
 
-Our app will show the de
+A spreadsheet with details for movies could look like this:
+![movie data in a spreadsheet](http://cd.sseu.re/tmdb_5000_movies-cleaned-up.csv_2018-01-15_17-44-51.png)
+We have a column for the title of the movie, the score (called `vote_average`), and the amount of votes that were cast for the movie (called `vote_count`).
 
-<!-- faking highlighting in Ruby; since CSV is not supported -->
-
+If you look at the csv file with these movie data, it is less pretty, but just as informative:
+<!-- fake highlights in Ruby; since CSV is not supported in GFM -->
 ```ruby
 "title","vote_average","vote_count"
 "Avatar",7.2,11800
@@ -36,39 +40,31 @@ Our app will show the de
 "Men in Black 3",6.2,4160
 ```
 
+If you compare them, you spot that they are about the exact same data.
+
+In CSV there are a few things that make it easier to understand the underlying data.
+1. The header line. Although optional, it communicates clearly to the audience what kind of data we're talking about.
+2. All cells are separated by a character. In this file (and most CSV files) it is the comma (`,`)  character.
+3. The values can be either strings or numbers.
+    Column 1, the title, is a string. It is good practice to put your strings in quoutes.
+    Column 2 and 3 are numbers. It is a bad idea to quote numbers - numbers should be just numbers.
+4. Every line in your CSV file is like a row in your spreadsheet; each movie is on its own line.
+
+Since this course isn't called `Taste of tiny data`, but `Taste of Big Data`, we need to have a somewhat more impressive set of data.
+
+## Download those movies!
+
+Well, lets not download the movies themself, but a CSV file about the movies.
+Maybe your teacher has a file prepared for you. Please download the file from the slack channel if your teacher shared it with you.
+If you're just following this course on your own, head over to kaggle.com, create an account there, log in, and after that download the dataset from [www.kaggle.com/tmdb/tmdb-movie-metadata/data](https://www.kaggle.com/tmdb/tmdb-movie-metadata/data). That download includes 2 CSV files. We will be only using the file `tmdb_5000_movies.csv`.
 
 # Exercise
 
-1. In your console make some calculations:
-    * calculate the sum of 2 and 3
-    * calculate the difference of 6 and 4 (6 minus 4 that is)
-    * divide 3 by 2.
-2. In your console play with strings:
-    * create a string with the contents `Taste of Big Data`
-    * convert it to all lowercase characters with the `toLowerCase()` function.
-3. And with variables:
-    * With `let`, declare the variable `movieTitle`
-    * Assign your favorite movie title tot that variable
-    * Convert your movieTitle to uppercase, and to lowercase.
+Anyway, either the file arrived over slack or you downloaded it; In short: you have it in your downloads. It should go into your big data workspace directory.
 
-<details>
-  <summary>Spoiler alert, click here if you're stuck.</summary>
-  <pre>
-    // On numbers
-    2 + 3
-    6 - 4
-    3 / 2
-  </pre>
-  <pre>
-    // On strings
-    "Taste of Big Data"
-    "Taste of Big Data".toLowerCase()
-  </pre>
-  <pre>
-    // On variables
-    let movieTitle
-    movieTitle = "Mister Nobody"
-    movieTitle.toUpperCase()
-    movieTitle.toLowerCase()
-  </pre>
-</details>
+Open your file navigator, and copy that file from Downloads into your desktop/taste-of-big-data project directory that is. **NOTE:** Do not change the contents or the name of that file.
+
+Open the file in VS Code. It will look like this:
+![csv file opened in VS Code](http://cd.sseu.re/5000-movies-csv-opened-in-code.png)
+
+There are a lot more fields and rows in that file than in our example.
