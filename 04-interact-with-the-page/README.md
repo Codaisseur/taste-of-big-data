@@ -99,7 +99,18 @@ There is just a small problem... Browsers and computers are so blazing fast that
 
 If you don't allow your browser to display the page, the element that you want to alter might not be present.
 
-So the document in your browser goes through a number of states. At a certain time it gets into the state called `'interactive'`. That is the moment we can ~~fiddle~~ interact with it.
+> #### 🤓 **An example: a car instead of a browser**
+>
+>For the sake of the argument, lets compare your browser to a car.
+>
+>You don't immediately start driving, but you wait till all passengers are in the car (loading the HTML, all Javascript, and stylesheets).
+>
+>When all passengers are on board, they have to fasten their seatbelt (reading and executing the contents of the loaded files).
+>
+>Only after that is done, your car is ready to leave (or in your browser, you can start interacting with the document).
+>
+
+So the document in your browser goes through a number of states. At a certain time it gets into the state called `'interactive'`. It is the last stage in the car example (we drive off); the moment we can interact with the document, including all scripts, that is loaded in our browser.
 
 In code, that would look like this:
 
