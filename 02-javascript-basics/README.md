@@ -44,7 +44,7 @@ An example makes this clear(er). We want to have the title in a variable, so we 
 
 ```javascript
 // A formal variable declaration, this makes it possible to use the variable movieTitle later
-let movieTitle  // This returns 'undefined' - declaring a variable has no noteworthy return value
+var movieTitle  // This returns 'undefined' - declaring a variable has no noteworthy return value
 
 // Assign your favorite movie title to your variable
 movieTitle = "Beauty and the Beast" // this returns "Beauty and the Beast", the value of your variable
@@ -76,7 +76,6 @@ Now that is a nice empty Javascript Console, time to fill it with something that
 
 # Exercises
 
-
 1. ✍️  In your console make some calculations:
     * calculate the sum of 2 and 3
     * calculate the difference of 6 and 4 (6 minus 4 that is)
@@ -85,7 +84,7 @@ Now that is a nice empty Javascript Console, time to fill it with something that
     * create a string with the contents `Taste of Big Data`
     * convert it to all lowercase characters with the `toLowerCase()` function.
 3. ✍️  In your console play with variables:
-    * With `let`, declare the variable `movieTitle`
+    * With `var`, declare the variable `movieTitle`
     * Assign your name of your favorite movie to that variable
     * Convert your movieTitle to uppercase, and to lowercase.
 
@@ -104,7 +103,7 @@ Now that is a nice empty Javascript Console, time to fill it with something that
   </pre>
   <pre>
     // On variables
-    let movieTitle
+    var movieTitle
     movieTitle = "Mister Nobody"
     movieTitle.toUpperCase()
     movieTitle.toLowerCase()

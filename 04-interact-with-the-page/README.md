@@ -82,7 +82,7 @@ Although the thing in the console looks like HTML, it is actually a Javascript o
 Because it is a Javascript thing, we can assign it to a variable:
 
 ```javascript
-let mostPopularByGenre = document.getElementById('most-popular-by-genre')
+var mostPopularByGenre = document.getElementById('most-popular-by-genre')
 ```
 
 Not only can you target specific elements; you can change the contents of your elements. Lets do it!
@@ -130,7 +130,7 @@ Are you interested in the simplest thing that could work? Well, how about you ch
 
 Happily enough, Javascript and HTML allow us to do just that:
 
-In your console, try running these lines
+In your console, try running this lines
 
 ```javascript
 mostPopularByGenre.innerText = movieGenres
@@ -143,3 +143,35 @@ Make changes to your project so you:
 1. Add a `div`-element with the id `'most-popular-by-genre'
 2. Get the element with that id, and assign it to a variable with the name `mostPopularByGenre`
 3. Change the inner text of the element to the contents of your `movieGenres` array.
+
+As always, reload your browser to see if it works.
+
+<details>
+  <summary>Spoiler alert, click here if you're stuck.</summary>
+  <h5>To add an element</h5>
+  <div>
+    <li>Open `index.html` in your editor
+    <li>Make sure to add the following line before the `<footer>` element
+    <pre>&lt;div id="most-popular-by-genre" class="movie-table"&gt;&lt;/div&gt;</pre>
+  </div>
+  <h5>To get an element by its id</h5>
+  <div>
+    <li>Open `movies.js` in your editor
+    <li>Add the following lines to make sure the browser is ready for interaction:
+    <pre>
+document.onreadystatechange = function () {
+  if (document.readyState == 'interactive') {
+    // this is where you can safely interact
+  }
+}</pre>
+    <li>After the line that says you can safely interact, add the following line:
+    <pre>
+var mostPopularByGenre = document.getElementById('most-popular-by-genre')</pre>
+</pre>
+  </div>
+  <h5>To change the inner text</h5>
+  <div>
+    Directly after the line you added in the previous step, you can make changes to the content. Paste the next line immediately after it.
+    <pre>mostPopularByGenre.innerText = movieGenres</pre>
+  </div>
+</details>

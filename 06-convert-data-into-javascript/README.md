@@ -157,7 +157,7 @@ And there is one function of key importance: If the parsing process is `complete
 
 ```javascript
 var papaParseConfiguration = {
-	header: true,
+  header: true,
   dynamicTyping: true,
   download: true,
   preview: 1,

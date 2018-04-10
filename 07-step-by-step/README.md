@@ -141,7 +141,7 @@ If you have the function in there, time to use it in the configuration of PapaPa
 ### Use the function for parsing movies
 
 Time to use the function from our parser. Remember the configuration object from before? Let's make 3 changes to it.
-1. When it is complete - it should just log that it is done
+1. We don't care when it completes, we should remove it. It is done when it is done.
 2. Let's preview 10 movies, 1 is just not enough
 3. Every movie (or `step` in the conversion) should be handled by our nice function.
     We do that by adding a `step` property, with the value of the name of our function.
@@ -150,13 +150,11 @@ Copy the updated configuration from below to the bottom of movies.js
 
 ```javascript
 var papaParseConfiguration = {
-	header: true,
+  header: true,
   dynamicTyping: true,
   download: true,
   preview: 10,                    // Changed
-  complete: function(results) {
-    console.log("I am done!");    // Changed
-  },
+                                  // The property complete is removed
   step: distillMovie              // This is new here
 }
 ```
@@ -166,16 +164,7 @@ With the function and the configuration set up correctly, lets parse some movies
 ### Run our parser
 
 The hardest part is done. Time to 'just' parse the movies.
-In movies.js, there is a part where we can interact with the page, it currently looks like this:
-```js
-document.onreadystatechange = function () {
-  if (document.readyState == 'interactive') {
-    mostPopularByGenre = document.getElementById('most-popular-by-genre')
-    mostPopularByGenre.innerText = movieGenres
-
-  }
-}
-```
+In movies.js, there is a part where we can interact with the page.
 
 Below the line that sets the `innerText` to `movieGenres`, add the line to parse your movies. After that, it looks like below:
 
@@ -185,6 +174,7 @@ document.onreadystatechange = function () {
     mostPopularByGenre = document.getElementById('most-popular-by-genre')
     mostPopularByGenre.innerText = movieGenres
 
+    // Just add next line
     Papa.parse('http://localhost:3000/tmdb_5000_movies.csv', papaParseConfiguration)
   }
 }
@@ -201,3 +191,5 @@ After finishing each individual exercise, reload the page in your browser and in
 > ✍️  **3:** Add the papa.parse call in the correct place in your movies.js
 >
 > ✍️  **Optional:** Remove all the `console.log` statements from previous exercises.
+>
+> while you're at it, try to use a preview of 100 movies...

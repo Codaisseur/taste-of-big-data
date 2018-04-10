@@ -55,21 +55,28 @@ In CSV there are a few things that make it easier to understand the underlying d
     - Column 1, the title, is a string. It is good practice to put your strings in quotes.
     -  Column 2 and 3 are numbers. It is a bad idea to quote numbers - numbers should be just numbers.
 
-Since this course isn't called `Taste of tiny data`, but `Taste of Big Data`, we need to have a somewhat more impressive set of data.
+Since this workshop isn't called `Taste of tiny data`, but `Taste of Big Data`, we need to have a somewhat more impressive set of data.
 
 ## Download those movies!
 
 Well, lets not download the movies themselves, but a CSV file about the movies.
+
 Maybe your teacher has a file prepared for you. Please download the file from the slack channel if your teacher shared it with you.
-If you're just following this course on your own, head over to kaggle.com, create an account there, log in, and after that download the dataset from [www.kaggle.com/tmdb/tmdb-movie-metadata/data](https://www.kaggle.com/tmdb/tmdb-movie-metadata/data). That download includes 2 CSV files. We will be only using the file `tmdb_5000_movies.csv`.
+
+If you follow this course on your own, head over to kaggle.com, create an account there, log in, and after that download the dataset from [www.kaggle.com/tmdb/tmdb-movie-metadata/data](https://www.kaggle.com/tmdb/tmdb-movie-metadata/data).
+That download includes 2 CSV files. We will be only using the file `tmdb_5000_movies.csv`.
 
 # Exercise
 
 Anyway, either the file arrived over slack or you downloaded it; In short: you have it in your downloads. It should go into your big data workspace directory.
 
-Open your file navigator, and copy that file from Downloads into your desktop/taste-of-big-data project directory that is. **NOTE:** Do not change the contents, nor the name of that file.
+Open your file navigator, and copy that file from Downloads into your desktop/taste-of-big-data project directory that is.
+
+**NOTE:** Do not change the contents, nor the name of that file.
 
 Open the file in VS Code. It will look like this:
-![csv file opened in VS Code](https://cd.sseu.re/5000-movies-csv-opened-in-code.png)
+![CSV file opened in VS Code](https://cd.sseu.re/5000-movies-csv-opened-in-code.png)
+
+Please close that file again. It is kinda big (your editor might have issues with it); your laptop could heat up considerably. If your (or your neighbors') laptop makes noise as if it wants to take of: close the file. RLY.
 
 There are a lot more fields and rows in that file than in our example. That data *is* **BIG**.

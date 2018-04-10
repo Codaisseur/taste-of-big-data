@@ -5,17 +5,17 @@ Luckily we can create as many variables as we need.
 
 In our app, we will want to display our genres. We could use something like this to store all genres in variables:
 ```javascript
-let genre1 = "Romance"
-let genre2 = "Action"
-let genre3 = "War"
+var genre1 = "Romance"
+var genre2 = "Action"
+var genre3 = "War"
 // et cetera
 ```
 
 Or you'd might be tempted to write something like this:
 ```javascript
-let romance = "Romance"
-let action = "Action"
-let war = "War"
+var romance = "Romance"
+var action = "Action"
+var war = "War"
 // et cetera
 ```
 
@@ -45,7 +45,7 @@ That array is nice and handy, but it would make sense to reference that array by
 The array holds a collection of genres, right? So lets assign it to the variable with the name `genres`.
 
 ```javascript
-let genres = ["Romance", "Action", "War"]
+var genres = ["Romance", "Action", "War"]
 ```
 
 This gives us a nice `genres` collection, that has elements for our genres. One variable with all the values that are related.
@@ -55,22 +55,22 @@ Not that it is very useful for our Most Popular Movie app, but arrays can hold v
 
 You could have an array of numbers:
 ```javascript
-let numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+var numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 Or we can mix and match anything in an array:
 
 ```javascript
-let mixedArray = [0, "one", 2, "three and a half", 4.5, "et", "cetera..."]
+var mixedArray = [0, "one", 2, "three and a half", 4.5, "et", "cetera..."]
 ```
 
 ### Recap: values in Javascript
 
 The 3 kinds of values you've learned are **numbers**, **strings**, and **arrays**. These values can be assigned to variables:
 ```javascript
-let number = 3
-let string = "Hello there!"
-let array = ["I am just an Array", "with some elements", 1, 2, 4.5]
+var number = 3
+var string = "Hello there!"
+var array = ["I am just an Array", "with some elements", 1, 2, 4.5]
 ```
 
 That's all the bare bones Javascript values you need to know. Now lets work with a specific file for our code for our movies app.
@@ -176,7 +176,7 @@ If you click the small triangle in the console before the word `Array(4)`, it wi
   <p>Open the <b>movies.js</b> file in your editor and paste in these lines:
   <pre>
 console.log("Greetings from movies.js")
-let movieGenres = ["Action", "Adventure", "Fantasy", "Science Fiction"]
+var movieGenres = ["Action", "Adventure", "Fantasy", "Science Fiction"]
 console.log(movieGenres)</pre>
   </p>
 </details>
