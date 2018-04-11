@@ -23,12 +23,15 @@ If you have any numerical values in your application and want to do calculations
 Sometimes numbers are not what you need though. Think of movie titles. That aren't numbers (except for the movie [9](https://www.themoviedb.org/movie/12244-9) that is...) Usually movies have titles like "The Shawshank Redemption", "The Godfather", or "The Dark Knight". Movie titles are strings of characters, or `String` in short.
 You let Javascript know that it is dealing with strings by placing them within (single or double) quotes.
 
-Strings are really helpful to work with text. You can even make changes to the strings with Javascript, just like you can do calculations with numbers:
-
+Strings are really helpful to work with text.
 ```javascript
-"The Dark Knight"               // this returns the string "The Dark Knight" itself
-"The Dark Knight".toUpperCase() // this returns "THE DARK KNIGHT", all capitalized
-"Liar ".repeat(2);              // this returns "Liar Liar "
+`The Dark Knight`               // this returns the string "The Dark Knight" itself
+```
+You can even make changes to the strings with Javascript, just like you can do calculations with numbers:
+
+```js
+`The Dark Knight`.toUpperCase() // this returns "THE DARK KNIGHT", all capitalized
+`Liar `.repeat(2);              // this returns "Liar Liar "
 ```
 
 ## (Re-)usability:  Variables
@@ -47,7 +50,7 @@ An example makes this clear(er). We want to have the title in a variable, so we 
 var movieTitle  // This returns 'undefined' - declaring a variable has no noteworthy return value
 
 // Assign your favorite movie title to your variable
-movieTitle = "Beauty and the Beast" // this returns "Beauty and the Beast", the value of your variable
+movieTitle = `Beauty and the Beast` // this returns "Beauty and the Beast", the value of your variable
 
 // this returns "BEAUTY AND THE BEAST", but doesn't change the value of the variable itself.
 movieTitle.toUpperCase()
@@ -98,13 +101,13 @@ Now that is a nice empty Javascript Console, time to fill it with something that
   </pre>
   <pre>
     // On strings
-    "Taste of Big Data"
-    "Taste of Big Data".toLowerCase()
+    `Taste of Big Data`
+    `Taste of Big Data`.toLowerCase()
   </pre>
   <pre>
     // On variables
     var movieTitle
-    movieTitle = "Mister Nobody"
+    movieTitle = `Mister Nobody`
     movieTitle.toUpperCase()
     movieTitle.toLowerCase()
   </pre>
