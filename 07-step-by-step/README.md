@@ -132,6 +132,37 @@ var distillMovie = function (rawMovieData) {
 }
 ```
 
+PapaParse has a surprise for us. If it couldn't convert the CSV into Javascript, it will send an error.
+
+If -for whatever reason- there was an error, we want to not execute the function at all.
+
+At the top, we should return from the function if there are any errors. In code that concept of any errors is represented as greater than 0:
+
+```js
+var distillMovie = function (rawMovieData) {
+  // don't continue if there are errors
+  if (rawMovieData.errors.length > 0) {
+    return // a return immediately breaks out of the function
+  }
+
+  // From the rawMovieData, go to the data property,
+  // and use the element on position 0 - the first element of the array, that is.
+  var rawMovie = rawMovieData.data[0]
+
+  // Declare a variable that holds an object for our cleanMovie
+  var cleanMovie = {}
+
+  // set the properties on our clean movie based on the raw movie
+  cleanMovie.title = rawMovie.title
+  cleanMovie.score = rawMovie.vote_average
+  cleanMovie.votes = rawMovie.vote_count
+  cleanMovie.year = rawMovie.release_date
+
+  // log the clean movie in our console:
+  console.log(cleanMovie)
+}
+```
+
 It would be nice to just test this in the console, but I want to have that function in the movies.js file, so we can always use it.
 
 Copy the **complete function** from `var distillMovie` till the last `}` on the into the bottom of the movies.js file.
