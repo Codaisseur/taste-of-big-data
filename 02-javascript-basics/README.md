@@ -34,6 +34,11 @@ You can even make changes to the strings with Javascript, just like you can do c
 `Liar `.repeat(2);              // this returns "Liar Liar "
 ```
 
+> ### 🤔 On quotation marks
+> In Javascript you can use single quotes ( ' ), double quotes ( " ) and back ticks ( \` ) to create strings.
+>
+> Although they roughly do the same thing, the string with back ticks is more power than the others. We will see that after the lunch.
+
 ## (Re-)usability:  Variables
 
 It is handy to have strings and numbers if you need them, but sometimes you have a value that you want to use in multiple places. In order to not repeat the same thing over and over, you can work with variables.
