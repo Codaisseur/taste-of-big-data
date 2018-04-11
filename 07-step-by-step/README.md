@@ -171,22 +171,22 @@ If you have the function in there, time to use it in the configuration of PapaPa
 
 ### Use the function for parsing movies
 
-Time to use the function from our parser. Remember the configuration object from before? Let's make 3 changes to it.
+Time to use the function from our parser. Remember the configuration object from before? Let's make a few changes to it.
 1. We don't care when it completes, we should remove it. It is done when it is done.
-2. Let's preview 10 movies, 1 is just not enough
-3. Every movie (or `step` in the conversion) should be handled by our nice function.
+1. Let's preview 10 movies, 1 is just not enough
+1. Every movie (or `step` in the conversion) should be handled by our nice function.
     We do that by adding a `step` property, with the value of the name of our function.
-
+1. We add a comment to it, that it should stay at the bottom of the file. This config is depending on a lot of other code.
 Copy the updated configuration from below to the bottom of movies.js
 
 ```javascript
 var papaParseConfiguration = {
+  // Keep this config at the bottom of this file!
   header: true,
   dynamicTyping: true,
   download: true,
-  preview: 10,                    // Changed
-                                  // The property complete is removed
-  step: distillMovie              // This is new here
+  preview: 10,
+  step: distillMovie
 }
 ```
 

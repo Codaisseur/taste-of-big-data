@@ -28,7 +28,8 @@ var distillMovie = function (rawMovieData) {
 }
 
 var papaParseConfiguration = {
-	header: true,
+  // Keep this config at the bottom of this file!
+  header: true,
   dynamicTyping: true,
   download: true,
   preview: 10,
