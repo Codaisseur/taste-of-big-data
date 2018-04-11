@@ -64,6 +64,22 @@ Or we can mix and match anything in an array:
 var mixedArray = [0, "one", 2, "three and a half", 4.5, "et", "cetera..."]
 ```
 
+### Using an Array
+
+There are many ways to access the individual elements in an array. The most used way is by their location inside the array.
+
+All elements are numbered, like houses on a street.
+
+The difference with numbers of houses is: Arrays start counting at the number 0. Let's see that in action:
+
+```js
+var genres = ["Romance", "Action", "War"]
+// Lets view the genres in our genres array. (number 0 that is)
+console.log(genres[0]) // will log "Romance" in the console
+console.log(genres[1]) // will log "Action" in the console
+console.log(genres[2]) // will log "War" in the console
+```
+
 ### Recap: values in Javascript
 
 The 3 kinds of values you've learned are **numbers**, **strings**, and **arrays**. These values can be assigned to variables:
