@@ -25,7 +25,7 @@ Change your file so it looks like this:
     <div id="most-popular-by-genre" class="movie-table"></div>
     <footer>Made with &hearts; at Taste of Big Data</footer>
 ```
-> **NOTE:** Only add the first line from the block of code above, do not remove any contents. And also, one line that holds a `footer` is enough.
+> **NOTE:** Only add the first line from the block of code above, do not remove any contents. And also, do not add a duplicate footer. It is merely in the code example above, so you know where to add the div 😉
 
 The thing you added is a `division` (aptly abbreviated to `div`). You can think of a division as a paragraph in a text document. Lets side-step into HTML briefly...
 
