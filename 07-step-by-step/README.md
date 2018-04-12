@@ -2,7 +2,7 @@
 
 Pat yourself on the shoulder... You should congratulate yourself for converting that movie from data into Javascript! 🍻
 
-What are the things that we're interested in in each movie?
+What are the things we're interested in for each movie?
 
 Since we want to build a movie recommendations app, we at least need the **scores** of the movie.
 
@@ -165,9 +165,9 @@ var distillMovie = function (rawMovieData) {
 
 It would be nice to just test this in the console, but I want to have that function in the movies.js file, so we can always use it.
 
-Copy the **complete function** from `var distillMovie` till the last `}` on the into the bottom of the movies.js file.
+Copy the **complete function** from `var distillMovie` until the last `}` and paste the code into the bottom of the movies.js file.
 
-If you have the function in there, time to use it in the configuration of PapaParse.
+Once you have the function in there, it is time to use it in the configuration of PapaParse.
 
 ### Use the function for parsing movies
 
@@ -177,7 +177,7 @@ Time to use the function from our parser. Remember the configuration object from
 1. Every movie (or `step` in the conversion) should be handled by our nice function.
     We do that by adding a `step` property, with the value of the name of our function.
 1. We add a comment to it, that it should stay at the bottom of the file. This config is depending on a lot of other code.
-Copy the updated configuration from below to the bottom of movies.js
+Copy the updated configuration from below and paste it into the bottom of the movies.js file.
 
 ```javascript
 var papaParseConfiguration = {
@@ -190,14 +190,14 @@ var papaParseConfiguration = {
 }
 ```
 
-With the function and the configuration set up correctly, lets parse some movies, shall we?
+With both the function and the configuration are set up correctly, lets parse some movies, shall we?
 
 ### Run our parser
 
 The hardest part is done. Time to 'just' parse the movies.
 In movies.js, there is a part where we can interact with the page.
 
-Below the line that sets the `innerText` to `movieGenres`, add the line to parse your movies. After that, it looks like below:
+Below the line that sets the `innerText` to `movieGenres`, add the line to parse your movies. Check out the code below as to the updated structure of this function:
 
 ```js
 document.onreadystatechange = function () {
