@@ -22,7 +22,7 @@ This is what VS code would look like now, not considering the color scheme. Most
 
 ![what a proper setup vs code would look like](https://cd.sseu.re/Code-resulting-view-no-documents-open.png)
 
-Now, in your 'taste of big data' workspace, you're gonna create the HTLM and CSS files. You will just create empty files, and then copy-paste contents in there.
+Now, in your 'taste of big data' workspace, you're gonna create the HTML and CSS files. You will just create empty files, and then copy-paste contents in there.
 
 Go to the menu of your editor and create a new file.
 ![create a file in vs code](https://cd.sseu.re/code-create-a-new-file.png)
