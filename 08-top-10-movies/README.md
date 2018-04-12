@@ -61,7 +61,7 @@ If we want to have a top 10 list of all movies in the CSV file, not just a previ
 
 Lets create a new array with movies, sorted on score.
 
-Sorting an array of objects is quite easy to write, but a lot of complex things are happening behind the that easy-looking code.
+Sorting an array of objects is quite easy to write, but a lot of complex things are happening behind that easy-looking code.
 
 In general, it looks like this:
 ```js
@@ -73,7 +73,7 @@ unsortedArray.sort(function (elementA, elementB) {
 
 It will go over 2 elements in the unsorted, and if the inner function returns a number greater than 0, the second element is sorted before the first element. If it returns a negative number (less than 0 that is), the first element is sorted before the second element.
 
-For our movies, the simplest thing that could work might be just subtracting the score of movieA from the score of movieB:
+For our movies, the simplest thing that might work best would require us to subtract the score of movieA from the score of movieB:
 ```js
 movies.sort(function (movieA, movieB) {
   return movieB.score - movieA.score
@@ -116,7 +116,7 @@ var moviesSortedOnScore = sortMovies(allMovies)
 console.log(moviesSortedOnScore.slice(0,10))
 ```
 
-Since we want to capture everything in functions that receive input, and, it could look like this:
+Since we want to capture everything in functions that receive input, it could look like this:
 
 ```js
 var topTen = function(movies) {
