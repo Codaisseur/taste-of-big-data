@@ -77,6 +77,6 @@ Open your file navigator, and copy that file from Downloads into your desktop/ta
 Open the file in VS Code. It will look like this:
 ![CSV file opened in VS Code](https://cd.sseu.re/5000-movies-csv-opened-in-code.png)
 
-Please close that file again. It is kinda big (your editor might have issues with it); your laptop could heat up considerably. If your (or your neighbors') laptop makes noise as if it wants to take of: close the file. RLY.
+Please close that file again. It is kinda big (your editor might have issues with it); your laptop could heat up considerably. If you (or your neighbours') laptop makes noise as if it wants to take of, close the file. RLY.
 
 There are a lot more fields and rows in that file than in our example. That data *is* **BIG**.
