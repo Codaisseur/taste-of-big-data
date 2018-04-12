@@ -71,7 +71,7 @@ Now you have a new panel in your editor; a terminal screen! You will use this te
 python -m http.server 3000
 ```
 
-> 🎩 All the characters are lowercase. Also, the terminal is REALLY pick about spaces, dots and all. So best to just copy-paste that line straight into your terminal panel. (or be very careful to type it verbatim)
+> 🎩 All the characters are lowercase. Also, the terminal is REALLY picky about spaces, dots and all. So best to just copy-paste that line straight into your terminal panel. (or be very careful to type it verbatim)
 
 If all went well, you should be greeted by this output:
 ![a running python web server from within vs code](https://cd.sseu.re/python-webserver-from-within-vs-code.png)
