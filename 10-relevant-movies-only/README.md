@@ -19,7 +19,7 @@ var displayMoviesAfterParsing = function () {
 }
 ```
 
-> 🙄 How to chose where to filter
+> 🙄 How to choose where to filter
 >
 >`allMovies` should not be changed; otherwise the name would be wrong
 >
@@ -62,9 +62,7 @@ var enoughVotes = function (movie) {
   return movie.votes > 50
 }
 ```
-That function should live in your movies.js file
-
-That function is very handy, because we can use it in from a filter. A filter will include all movies that gave a positive signal, and will exclude the ones with a negative signal.
+That function should live in your movies.js file and is very handy, because we can use it to form a filter. A filter will include all movies that gave a positive signal, and will exclude the ones with a negative signal.
 
 So, we want to have a collection of **filtered movies**, that is a subset of **allMovies** based on a **filter** that only allows movies with **enough votes**.
 
