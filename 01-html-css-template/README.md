@@ -80,7 +80,7 @@ If the result looks quite different, try this command:
 ```terminal
 python -m SimpleHTTPServer 3000
 ```
-Ask help if you cannot get it working.
+Ask for help if you cannot get it working.
 
 ### Look at that page
 Time to start Chrome. That will be the main browser for today. Go to the address bar and enter this URL: [localhost:3000](http://localhost:3000) Or just click that link if you read this page from Chrome).
