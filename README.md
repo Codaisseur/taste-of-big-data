@@ -12,7 +12,7 @@ We will be using these tools today, please ensure you have them installed:
 
 ## What are we building?
 
-Today we're building a movie recommendation app. The data comes from a dataset of 5000 movies. A basic HTML and CSS are provided, and together we'll implement all the javascript that is necessary to make some interesting lists:
+Today we're building a movie recommendation app. The data comes from a dataset of 5000 movies. A basic HTML and CSS structure has already been provided, but together we'll implement all the javascript that is necessary to make some interesting lists:
 * An all-time top 10
 * A per-genre top 5
 * The top 5 for a year if your choice
