@@ -66,7 +66,7 @@ var mixedArray = [0, "one", 2, "three and a half", 4.5, "et", "cetera..."]
 
 ### Using an Array
 
-There are many ways to access the individual elements in an array. The most used way is by their location inside the array.
+There are many ways to access the individual elements in an array. The most commonly used way is by their location inside the array.
 
 All elements are numbered, like houses on a street.
 
@@ -102,7 +102,7 @@ Right click on your `taste-of-big-data` directory and select `New File`.
 You can now type the name of the file. Please call it `movies.js`. Again, no capitals, spaces et cetera:
 ![new file with the name movies.js](https://cd.sseu.re/moviesJsFileAboutToBeCreated.png)
 
-Although still empty; now is a nice moment to save the file.
+Although still empty, now is a nice moment to save the file.
 
 In your app, there are 3 files now: The `index.html`, `styles.css`, and your empty `movies.js`.
 
@@ -142,7 +142,7 @@ Now, open your newly created Javascript file (movies.js) and add this content in
 ```javascript
 console.log("Greetings from movies.js")
 ```
-This line informs tells your Javascript console to log the message `"Greetings from movies.js"`.
+This line informs your Javascript console to log the message `"Greetings from movies.js"`.
 Think of the console as the captains logbook. You can make entries in your logbook with `console.log()`. Between the parentheses (that are the `(` and `)` characters), you can put anything that needs to show up in the log.
 
 Go to your browser, reload your page, and check if the message appears in your console (a.k.a. the logbook)
