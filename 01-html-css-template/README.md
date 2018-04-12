@@ -22,7 +22,7 @@ This is what VS code would look like now, not considering the color scheme. Most
 
 ![what a proper setup vs code would look like](https://cd.sseu.re/Code-resulting-view-no-documents-open.png)
 
-Now, in your 'taste of big data' workspace, you're gonna create the HTLM and CSS files. You will just create empty files, and then copy-paste contents in there.
+Now, in your 'taste of big data' workspace, you're gonna create the HTML and CSS files. You will just create empty files, and then copy-paste contents in there.
 
 Go to the menu of your editor and create a new file.
 ![create a file in vs code](https://cd.sseu.re/code-create-a-new-file.png)
@@ -71,7 +71,7 @@ Now you have a new panel in your editor; a terminal screen! You will use this te
 python -m http.server 3000
 ```
 
-> 🎩 All the characters are lowercase. Also, the terminal is REALLY pick about spaces, dots and all. So best to just copy-paste that line straight into your terminal panel. (or be very careful to type it verbatim)
+> 🎩 All the characters are lowercase. Also, the terminal is REALLY picky about spaces, dots and all. So best to just copy-paste that line straight into your terminal panel. (or be very careful to type it verbatim)
 
 If all went well, you should be greeted by this output:
 ![a running python web server from within vs code](https://cd.sseu.re/python-webserver-from-within-vs-code.png)
@@ -80,7 +80,7 @@ If the result looks quite different, try this command:
 ```terminal
 python -m SimpleHTTPServer 3000
 ```
-Ask help if you cannot get it working.
+Ask for help if you cannot get it working.
 
 ### Look at that page
 Time to start Chrome. That will be the main browser for today. Go to the address bar and enter this URL: [localhost:3000](http://localhost:3000) Or just click that link if you read this page from Chrome).
