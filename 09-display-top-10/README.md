@@ -65,11 +65,9 @@ This will log in your console:
   <span class="movie votes">2846</span>
 </div>
 ```
-Exactly what we need, but not on the right place! It should be inside the HTML, not in the console. Lets make a small change.
+Exactly what we need, but not in the right place! It should be inside the HTML, not in the console. Lets make a small change.
 
-At the end of the
-
-> 🙄 Remember that I told you that strings with back tick are powerful?
+> 🙄 Remember that I told you that strings with back ticks are powerful?
 >
 > In the above code you see things like `${movie.title}`. That is a powerful way of *printing* the javascript value of `movie.title` *inside* the string.
 >
@@ -81,7 +79,7 @@ Remove the `return movieElement` line from the function. Now lets attach the gen
 
 To do that, we need to get the element that we want to add to. Lets get it by its `id`. If we have the element, we want to append our movie HTML as a child element.
 
-Add these 2 lines as a replacement to the return, to the bottom of the function body:
+Add these 2 lines as a replacement to the return, at the bottom of the function body:
 
 ```js
   var mostPopularMovies = document.getElementById('most-popular')
@@ -123,9 +121,9 @@ Convert that snippet into a function. We want to call it as soon as it is time. 
 
 Putting it in a function also allows us to keep that code nice contained place and give it a good name!
 
-Struggling to come up with a name? What about `displayMoviesAfterParsing`? It might not be best, but it expresses intent.
+Struggling to come up with a name? What about `displayMoviesAfterParsing`? It might not be the best, but it expresses intent.
 
-Place this function in your movies.js
+Place this function in your movies.js file.
 
 ```js
 var displayMoviesAfterParsing = function () {
