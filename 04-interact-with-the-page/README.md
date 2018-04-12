@@ -62,7 +62,7 @@ With that thing added to your page, and explained what it does, time to save you
 
 ## 2: Find that element with Javascript
 
-The html part is now done. Lets see if you can reach the just added element from Javascript.
+The html part is now done. Lets see if you can find the newly added element from Javascript.
 In your browser, go to your console so you can test if you can interact with the page.
 
 First we need to get our element by its `id`. That element is in our html-document. With that background information, the next line reads almost like prose...
