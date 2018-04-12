@@ -20,7 +20,7 @@ If you have any numerical values in your application and want to do calculations
 
 ## Strings
 
-Sometimes numbers are not what you need though. Think of movie titles. That aren't numbers (except for the movie [9](https://www.themoviedb.org/movie/12244-9) that is...) Usually movies have titles like "The Shawshank Redemption", "The Godfather", or "The Dark Knight". Movie titles are strings of characters, or `String` in short.
+Sometimes numbers are not what you need though. Think of movie titles that aren't numbers (except for the movie [9](https://www.themoviedb.org/movie/12244-9) that is...). Usually movies have titles like "The Shawshank Redemption", "The Godfather", or "The Dark Knight". Movie titles are strings of characters, or `String` in short.
 You let Javascript know that it is dealing with strings by placing them within (single or double) quotes.
 
 Strings are really helpful to work with text.
@@ -37,13 +37,13 @@ You can even make changes to the strings with Javascript, just like you can do c
 > ### 🤔 On quotation marks
 > In Javascript you can use single quotes ( ' ), double quotes ( " ) and back ticks ( \` ) to create strings.
 >
-> Although they roughly do the same thing, the string with back ticks is more power than the others. We will see that after the lunch.
+> Although they roughly do the same thing, the string with back ticks is more power than the others. We will see that after lunch.
 
 ## (Re-)usability:  Variables
 
 It is handy to have strings and numbers if you need them, but sometimes you have a value that you want to use in multiple places. In order to not repeat the same thing over and over, you can work with variables.
-Variables have a name, and contains a value, or in other words
-A variable is like a container: it can hold any value. And by referring to the name of the variable, you have access to its contents.
+Variables have a name and contains a value; in other words
+a variable is like a container: it can hold any value. By referring to the name of the variable, you have access to its contents.
 
 You have to let Javascript know you will be using a variable in your program. You *declare* that variable to Javascript
 After you've formally introduced each other, you can then use your variable
