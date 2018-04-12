@@ -13,7 +13,7 @@ For the movie 'The Godfather' it looks like this
 "[{""id"": 18, ""name"": ""Drama""}, {""id"": 80, ""name"": ""Crime""}]"
 ```
 
-You as a human can probably spot in seconds what the genres of this movie are. The computer will have a hard time finding that info; since it doesn't know hoe it is structured.
+You as a human can probably spot in seconds what the genres of this movie are. The computer will have a hard time finding that info; since it doesn't know how it is structured.
 
 It looks so strange, since some nice developer tried to put some javascript objects (with properties for `id` and `name`) inside an array, and store that as a string inside CSV.
 
