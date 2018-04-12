@@ -73,48 +73,42 @@ Exactly what we need, but not in the right place! It should be inside the HTML, 
 >
 > Also, with strings in back ticks you can let them span over multiple lines. That is very good for readability.
 
-Lets make a change to the displayMovie function. At the end of it, we `return` it. But instead of it being returned, it should place the content on the page.
-
-Remove the `return movieElement` line from the function. Now lets attach the generated HTML to the correct element on the page.
-
-To do that, we need to get the element that we want to add to. Lets get it by its `id`. If we have the element, we want to append our movie HTML as a child element.
-
-Add these 2 lines as a replacement to the return, at the bottom of the function body:
-
-```js
-  var mostPopularMovies = document.getElementById('most-popular')
-  mostPopularMovies.appendChild(movieElement)
-```
-
 ## Display the top 10
 
-So we have a function that can give us a top 10, and we have a function that can place html elements on the screen. Time to stitch 'em together.
+So we have a function that can give us a top 10, and we have a function that can generate html for movies. Time to stitch 'em together.
 
 It would be nice if there was a way that we could run the `displayMovie` function for each element in our array. Lucky for us, Javascript provides!
 
 Every array has a `forEach` function. That function allows you to run some code for every element in your array, and it is guaranteed to run in the correct order (which is kinda important for a top 10 )
 
-From our **most popular** movies collection, we want - **for each** thing it contains - to **display** the **movie**.
+From our **most popular** movies collection, we want - **for each** movie it contains - have the functionality that it **displays** the **movie**.
 
 Combining the bold words in Javascript, it gives us this code:
 
 ```js
 // lets assume we have this 'mostPopular' collection
-mostPopular.forEach(displayMovie);
+mostPopular.forEach( function(movie) {
+  var movieHTML = displayMovie(movie)
+  mostPopularMovies.appendChild(movieHTML)
+})
 ```
 
 > 🤓 Lets **break it down**.
 >
-> The `forEach` allows you to run a function (displayMovie) and it calls that function with each consecutive element in the array.
+> The `forEach` allows you to run a function. It calls that function with each consecutive element in the array.
 >
-> In the above example, internally Javascript calls the displayMovie function 10 times; once per movie.
+> In the above example, Javascript calls the displayMovie function 10 times; once per movie, the result is appended to the screen.
 
 If you want to run this in the console, here is a snippet that could work:
 ```js
 var moviesSortedOnScore = sortMovies(allMovies)
 var mostPopular = topTen(moviesSortedOnScore)
+var mostPopularMovies = document.getElementById('most-popular')
 
-mostPopular.forEach(displayMovie);
+mostPopular.forEach( function(movie) {
+  var movieHTML = displayMovie(movie)
+  mostPopularMovies.appendChild(movieHTML)
+})
 ```
 
 Convert that snippet into a function. We want to call it as soon as it is time. Immediately when PapaParse is done with the conversion is that time.
@@ -129,8 +123,12 @@ Place this function in your movies.js file.
 var displayMoviesAfterParsing = function () {
   var moviesSortedOnScore = sortMovies(allMovies)
   var mostPopular = topTen(moviesSortedOnScore)
+  var mostPopularMovies = document.getElementById('most-popular')
 
-  mostPopular.forEach(displayMovie);
+  mostPopular.forEach( function(movie) {
+    var movieHTML = displayMovie(movie)
+    mostPopularMovies.appendChild(movieHTML)
+  })
 }
 ```
 
