@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie Recommendations</title>
+
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.3.7/papaparse.min.js"></script>
+    <script src="movies.js"></script>
+  </head>
+
+  <body>
+    <h1>Movie recommendations</h1>
+
+    <div id="most-popular" class="movie-table">
+      <h3>Most popular movies</h3>
+
+      <span class="movie-list header-line title">title</span>
+      <span class="movie-list header-line year">year</span>
+      <span class="movie-list header-line score">score</span>
+      <span class="movie-list header-line votes">votes</span>
+    </div>
+
+    <div id="most-popular-by-genre" class="movie-table"></div>
+
+    <footer>Made with &hearts; at Taste of Big Data</footer>
+  </body>
+</html>
