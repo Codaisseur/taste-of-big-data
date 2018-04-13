@@ -19,7 +19,7 @@ If we look at the Avatar movie from the previous chapter, that object had WAAAYY
   title: "Avatar",
   score: 7.2,
   votes: 11800,
-  year: 2009
+  year: "2009-10-12"
 }
 ```
 
@@ -219,7 +219,7 @@ After finishing each individual exercise, reload the page in your browser and in
 >
 > ✍️  **2:** Add the (updated) configuration for PapaParse to Movies.js
 >
-> ✍️  **3:** Add the papa.parse call in the correct place in your movies.js
+> ✍️  **3:** Add the Papa.parse call in the correct place in your movies.js
 >
 > ✍️  **Optional:** Remove all the `console.log` statements from previous exercises.
 >

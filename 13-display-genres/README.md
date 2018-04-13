@@ -167,7 +167,8 @@ Well, that is ridiculously easy; That can also be almost-verbatim stolen.
       genreElement.appendChild(movieHTML)
     })
 ```
-For all popularForGenre movies
+
+That is so little code, it feels like an anti-climax. Sorry for that, but this is enough. :D
 
 # Exercise
 1. ✍️  **The grand finale** Show a top 10 per genre, following the steps from above.
