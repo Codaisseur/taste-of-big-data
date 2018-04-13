@@ -180,5 +180,6 @@ If all went well, your log will have output that looks like the following entry:
 
 # Exercises
 
+1. ✍️  Add a script tag in `index.html` so you can use the PapaParse library.
 1. ✍️  In your console create a variable `papaParseConfiguration` that holds an object with the configuration as mentioned above.
-2. ✍️  Convert the rows in the CSV file, and check in your console if the output resembles the above example.
+1. ✍️  Convert the rows in the CSV file, and check in your console if the output resembles the above example.
