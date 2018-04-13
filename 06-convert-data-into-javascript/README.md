@@ -170,7 +170,7 @@ That is the object we need (for now) to configure PapaParse. Copy it into the co
 
 Then, use the library and your custom made configuration to parse the first movie in the CSV file. Run the next line in your terminal.
 ```javascript
-Papa.parse('http://localhost:3000/tmdb_5000_movies.csv', papaParseConfiguration)
+Papa.parse('https://cd.sseu.re/tmdb_5000_movies.csv', papaParseConfiguration)
 ```
 
 If all went well, your log will have output that looks like the following entry:

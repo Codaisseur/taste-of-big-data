@@ -84,8 +84,8 @@ This will return a number above 0 if the score of movieB is higher than the scor
 Since we want our movies to be sorted from a function, we create a function that wraps the above code:
 ```js
 var sortMovies = function (movies) {
-  // make a clone of the movies array
-  var unsorted = movies.slice()
+  // When using sort in Javasript; you need to work on a clone of the data.
+  var unsorted = movies.slice() // the variable unsorted is a clone of the movies variable
 
   return unsorted.sort(function (movieA, movieB) {
     return movieB.score - movieA.score
