@@ -183,9 +183,9 @@ Now that all the cruft is removed, time to implement our changes.
 First we have to parse all genres of a movie. Add the next line at the end of the body of `distillMovie`
 
 ```js
-  var thisMoviesGenres = JSON.parse(rawMovie.genres)
+  var thisMovieGenres = JSON.parse(rawMovie.genres)
 ```
-At this point we have to run some code `forEach` genre in `thisMoviesGenres`.
+At this point we have to run some code `forEach` genre in `thisMovieGenres`.
 ```js
 thisMovieGenres.forEach(function (rawGenre) {
   // some code that we will see later
