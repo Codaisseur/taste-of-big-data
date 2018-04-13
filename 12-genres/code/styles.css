@@ -27,11 +27,11 @@ h1 {
 
 .movie-table span{
   display: inline-block;
-  min-width: 19%;
+  width: 19%;
 }
 
 .movie-table span.title{
-  min-width: 40%;
+  width: 40%;
 }
 
 .movie-table {
@@ -51,6 +51,16 @@ h1 {
 .movie-list {
   border-right: 1px solid rgba(0,0,0,0.1);
   border-left: 1px solid rgba(0,0,0,0.1);
+}
+
+#most-popular-by-genre {
+  margin-bottom: 26px;
+}
+
+#most-popular-by-genre .movie-table {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 2px solid #fff
 }
 
 footer {

@@ -117,13 +117,19 @@ h1 {
 
 .movie-table h3 {
   text-align: center;
-  grid-column: span 4
 }
 
-.movie-table {
-  display: grid;
-  grid-template-areas: "title year score votes";
-  grid-template-columns: 4fr 1fr 1fr 1fr;
+.movie-table div.movie:hover {
+  background-color: #eee;
+}
+
+.movie-table span{
+  display: inline-block;
+  width: 19%;
+}
+
+.movie-table span.title{
+  width: 40%;
 }
 
 .movie-table {
@@ -145,6 +151,16 @@ h1 {
   border-left: 1px solid rgba(0,0,0,0.1);
 }
 
+#most-popular-by-genre {
+  margin-bottom: 26px;
+}
+
+#most-popular-by-genre .movie-table {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 2px solid #fff
+}
+
 footer {
   position: fixed;
   background-color: #f8f8f8;
@@ -157,6 +173,7 @@ footer {
   width: 40%;
   text-align: center;
 }
+
 ```
 Still not the prettiest thing, but it will do for now.
 

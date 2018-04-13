@@ -6,23 +6,32 @@ body {
   padding-bottom: 10px;
 }
 
-h1{
+h1 {
   text-align: center;
 }
+
 .movie-table {
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
   background-color: #f8f8f8;
   border-radius: 5px;
   padding: 0.5em;
 }
+
 .movie-table h3 {
   text-align: center;
-  grid-column: span 4
 }
-.movie-table {
-  display: grid;
-  grid-template-areas: "title year score votes";
-  grid-template-columns: 4fr 1fr 1fr 1fr;
+
+.movie-table div.movie:hover {
+  background-color: #eee;
+}
+
+.movie-table span{
+  display: inline-block;
+  width: 19%;
+}
+
+.movie-table span.title{
+  width: 40%;
 }
 
 .movie-table {
@@ -38,12 +47,23 @@ h1{
   background-color: #fff;
   font-size:  110%;
 }
+
 .movie-list {
   border-right: 1px solid rgba(0,0,0,0.1);
   border-left: 1px solid rgba(0,0,0,0.1);
 }
 
-footer{
+#most-popular-by-genre {
+  margin-bottom: 26px;
+}
+
+#most-popular-by-genre .movie-table {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 2px solid #fff
+}
+
+footer {
   position: fixed;
   background-color: #f8f8f8;
   bottom: 0.2em;
