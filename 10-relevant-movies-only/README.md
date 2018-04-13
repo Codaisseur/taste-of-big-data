@@ -83,8 +83,12 @@ var displayMoviesAfterParsing = function () {
   var relevantMovies = allMovies.filter(enoughVotes)
   var moviesSortedOnScore = sortMovies(relevantMovies)
   var mostPopular = topTen(moviesSortedOnScore)
+  var mostPopularMovies = document.getElementById('most-popular')
 
-  mostPopular.forEach(displayMovie)
+  mostPopular.forEach( function(movie) {
+    var movieHTML = displayMovie(movie)
+    mostPopularMovies.appendChild(movieHTML)
+  })
 }
 ```
 
